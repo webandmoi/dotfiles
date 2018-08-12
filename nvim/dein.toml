@@ -1,0 +1,59 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+# ==========================================================
+# color - airline
+# ==========================================================
+[[plugins]]
+repo = 'tomasr/molokai'
+hook_add = '''
+set background=dark
+au MyAutoCmd VimEnter * nested colorscheme molokai 
+'''
+
+[[plugins]]
+repo    = 'vim-airline/vim-airline'
+hook_add = '''
+let g:airline#extensions#ale#enabled = 1
+'''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+
+# ==========================================================
+# file
+# ==========================================================
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+autocmd vimenter * NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let g:NERDTreeShowBookmarks=1
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeDirArrows = 1
+let g:NERDTreeDirArrowExpandable  = '▶'
+let g:NERDTreeDirArrowCollapsible = '▼'
+map <silent><C-n> :NERDTreeToggle<CR><Paste>
+'''
+
+# ==========================================================
+# lint
+# ==========================================================
+
+[[plugins]]
+repo = 'w0rp/ale'
+hook_add = '''
+let g:ale_sign_column_always = 1
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\   'css': ['stylelint'],
+\   'scss': ['stylelint'],
+\}
+'''
+
+
+[[plugins]]
+repo = 'mattn/emmet-vim'
+hook_add = '''
+'''
