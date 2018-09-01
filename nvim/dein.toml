@@ -23,7 +23,6 @@ repo = 'vim-airline/vim-airline-themes'
 # ==========================================================
 # file
 # ==========================================================
-
 [[plugins]]
 repo = 'scrooloose/nerdtree'
 hook_add = '''
@@ -40,7 +39,6 @@ map <silent><C-n> :NERDTreeToggle<CR><Paste>
 # ==========================================================
 # lint
 # ==========================================================
-
 [[plugins]]
 repo = 'w0rp/ale'
 hook_add = '''
@@ -57,3 +55,4 @@ let g:ale_linters = {
 repo = 'mattn/emmet-vim'
 hook_add = '''
 '''
+
